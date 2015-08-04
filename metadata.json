@@ -1,0 +1,14 @@
+{
+  "name": "stbenjam-hash_resources",
+  "version": "1.0.0",
+  "author": "stbenjam",
+  "summary": "Pass a hash to create various types of resources, best used with an ENC",
+  "license": "GPL-3.0+",
+  "source": "https://github.com/stbenjam/puppet-hash_resources",
+  "project_page": "https://github.com/stbenjam/puppet-hash_resources",
+  "issues_url": "https://github.com/stbenjam/puppet-hash_resources/issues",
+  "dependencies": [
+    {"name":"puppetlabs-stdlib","version_requirement":">= 1.0.0"}
+  ]
+}
+
