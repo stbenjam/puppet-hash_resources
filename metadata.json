@@ -1,6 +1,6 @@
 {
   "name": "stbenjam-hash_resources",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "stbenjam",
   "summary": "Pass a hash to create various types of resources, best used with an ENC",
   "license": "GPL-3.0+",
