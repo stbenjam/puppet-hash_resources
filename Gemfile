@@ -1,9 +1,17 @@
 source 'https://rubygems.org'
 
-gem 'puppet', ENV.key?('PUPPET_VERSION') ? "~> #{ENV['PUPPET_VERSION']}" : '>= 2.7'
+gem 'puppet', ENV.key?('PUPPET_VERSION') ? "~> #{ENV['PUPPET_VERSION']}" : '~> 3.5'
 
-gem 'rake'
-gem 'rspec-puppet', '~> 2.0'
+if RUBY_VERSION.start_with? '1.8'
+  gem 'rake', '< 11'
+  gem 'rspec', '>= 3', '< 3.2'
+  gem 'rspec-puppet-facts', '< 1.4.0'
+else
+  gem 'rake'
+  gem 'rspec', '~> 3.0'
+  gem 'rspec-puppet-facts', '>= 1.5'
+end
+gem 'rspec-puppet', '~> 2.3'
 gem 'puppetlabs_spec_helper', '>= 0.8.0'
 gem 'puppet-lint', '>= 1'
 gem 'puppet-lint-unquoted_string-check'
@@ -20,10 +28,8 @@ gem 'simplecov'
 gem 'puppet-blacksmith', '>= 3.1.0', {"groups"=>["development"]}
 gem 'rest-client', '< 1.7', {"platforms"=>["ruby_18"], "groups"=>["development"]}
 gem 'mime-types', '~> 1.0', {"platforms"=>["ruby_18"], "groups"=>["development"]}
-gem 'rspec-puppet-facts'
+gem 'json', '~> 1.0', {"platforms"=>["ruby_18", "ruby_19"], "groups"=>["test"]}
+gem 'json_pure', '~> 1.0', {"platforms"=>["ruby_18", "ruby_19"], "groups"=>["test"]}
 gem 'metadata-json-lint'
-gem 'rspec', '< 3.2.0', {"platforms"=>["ruby_18"]}
-gem 'json'
-gem 'webmock'
 
 # vim:ft=ruby
