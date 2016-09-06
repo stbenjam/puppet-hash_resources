@@ -8,6 +8,7 @@
 # ----------
 #
 # $resources::   A hash of resources
+# $realize::     A hash of virtual resources to realize
 #
 # Examples
 # --------
