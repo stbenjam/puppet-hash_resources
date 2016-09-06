@@ -40,6 +40,9 @@
 #          /tmp/bar:
 #            ensure: present
 #            content: test
+#      realize:
+#        File[/tmp/myfile]: 
+#        Ssh_authorized_key[root]: 
 #
 # Authors
 # -------
@@ -53,8 +56,10 @@
 #
 class hash_resources(
   $resources = {},
+  $realize = {},
 ) {
 
   hash_resources($resources)
+  hash_realize($realize)
 
 }
