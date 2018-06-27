@@ -52,7 +52,7 @@
 # Copyright 2015 Stephen Benjamin
 #
 class hash_resources(
-  $resources = {},
+  Hash $resources = {},
 ) {
 
   hash_resources($resources)
